@@ -2,11 +2,12 @@
 int main()
 {
 int capacity;
-int array[capacity];
+
 
 
 printf("enter capacity of array\n");
 scanf("%d",&capacity);
+int array[capacity];
 for (int i = 0; i < capacity; i++)
 {
     printf("enter number to be entered in array block %d\n",i+1);
