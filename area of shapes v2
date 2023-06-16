@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+
+int towd();
+int threed();
+int main()
+
+{
+    char type_of_shape[100];//input data var
+
+
+    //welcome screen code start
+printf("---------------welcome to area calculator---------------\n");
+printf("\t\t     \"A CODE BY SAGAR\"\n");
+  //welcome screen code end
+
+
+//3D 2D START
+printf("which type of shape's area you want to find\n3d\n2d\n");
+fgets(type_of_shape,100,stdin);
+if (strcmp(type_of_shape,"3d")==0||strcmp(type_of_shape,"3D")==0)
+{
+    threed();
+}
+else if (strcmp(type_of_shape,"2d")==0||strcmp(type_of_shape,"2D")==0)
+{
+    towd();
+}
+else{
+    printf("sorry we were unable to proceded due to wrong data entered please try again");
+}
+//3D 2D end
+return 0;
+}
+int towd(){
+    char input_shape[100];
+    printf("type the 2d shape whos area you want ");
+fgets(input_shape,100,stdin);
+return 0;
+}
+int threed(){
+    return 0;
+}
