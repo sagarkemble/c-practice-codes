@@ -1,8 +1,15 @@
 #include<stdio.h>
 #include<string.h>
-
-int towd();
-int threed();
+#include<ctype.h>
+int verifyier(char [20]);
+void towd();
+void threed();
+void circle(){
+    char input_data[20];
+    printf("enter value of radius of circle\n");
+    scanf("%d",input_data);
+    verifyier(input_data);
+}
 int main()
 
 {
@@ -15,29 +22,44 @@ printf("\t\t     \"A CODE BY SAGAR\"\n");
   //welcome screen code end
 
 
-//3D 2D START
+//3D 2D functio callSTART
 printf("which type of shape's area you want to find\n3d\n2d\n");
 fgets(type_of_shape,100,stdin);
-if (strcmp(type_of_shape,"3d")==0||strcmp(type_of_shape,"3D")==0)
+if (strcmp(type_of_shape,"3d\n")==0||strcmp(type_of_shape,"3D\n")==0)
 {
     threed();
 }
-else if (strcmp(type_of_shape,"2d")==0||strcmp(type_of_shape,"2D")==0)
+else if (strcmp(type_of_shape,"2d\n")==0||strcmp(type_of_shape,"2D\n")==0)
 {
     towd();
 }
 else{
     printf("sorry we were unable to proceded due to wrong data entered please try again");
 }
-//3D 2D end
+//3D 2D  functio callend
 return 0;
 }
-int towd(){
+void towd(){//calling individual function shapes
     char input_shape[100];
     printf("type the 2d shape whos area you want ");
 fgets(input_shape,100,stdin);
-return 0;
+if (strcmp(input_shape,"circle\n")==0||strcmp(input_shape,"CIRCLE\n")==0)
+{
+circle();
 }
-int threed(){
-    return 0;
+}
+void threed(){
+    
+}
+int verifyier(char input[20]){
+int lenght=strlen(input);
+for (int i = 0; i <= lenght; i++)
+{
+    if (isdigit(input[i]==0))
+    {
+        printf("hi");
+    }
+    
+}
+
 }
