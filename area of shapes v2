@@ -1,65 +1,51 @@
 #include<stdio.h>
-#include<string.h>
 #include<ctype.h>
-int verifyier(char [20]);
-void towd();
+#include <string.h>
+void twod();
 void threed();
-void circle(){
-    char input_data[20];
-    printf("enter value of radius of circle\n");
-    scanf("%d",input_data);
-    verifyier(input_data);
-}
 int main()
 
 {
-    char type_of_shape[100];//input data var
-
-
-    //welcome screen code start
+    char input[100];
+    char shape_type[5];
 printf("---------------welcome to area calculator---------------\n");
 printf("\t\t     \"A CODE BY SAGAR\"\n");
-  //welcome screen code end
-
-
-//3D 2D functio callSTART
-printf("which type of shape's area you want to find\n3d\n2d\n");
-fgets(type_of_shape,100,stdin);
-if (strcmp(type_of_shape,"3d\n")==0||strcmp(type_of_shape,"3D\n")==0)
+printf("which type of shape is it\n3d\n2d\n");
+fgets(input,5,stdin);
+if (strcmp(input,"3d\n")==0||strcmp(input,"3D\n")==0)
 {
-    threed();
+    printf("hi");
 }
-else if (strcmp(type_of_shape,"2d\n")==0||strcmp(type_of_shape,"2D\n")==0)
+
+else if (strcmp(input,"2d\n")==0||strcmp(input,"2D\n")==0)
 {
-    towd();
+    twod();
 }
 else{
-    printf("sorry we were unable to proceded due to wrong data entered please try again");
-}
-//3D 2D  functio callend
-return 0;
-}
-void towd(){//calling individual function shapes
-    char input_shape[100];
-    printf("type the 2d shape whos area you want ");
-fgets(input_shape,100,stdin);
-if (strcmp(input_shape,"circle\n")==0||strcmp(input_shape,"CIRCLE\n")==0)
-{
-circle();
-}
-}
-void threed(){
-    
-}
-int verifyier(char input[20]){
-int lenght=strlen(input);
-for (int i = 0; i <= lenght; i++)
-{
-    if (isdigit(input[i]==0))
-    {
-        printf("hi");
-    }
-    
+    printf("wrong");
 }
 
+//  printf("enter a value");
+//  scanf("%s",input);
+// for (
+//     int i = 0; input[i] != '\0'; i++)
+// {
+//     if (!isdigit(input[i]))
+//     {
+//      printf("wrong data");
+//      return 0;
+//     }
+
+   
+// }
+
+return 0;
 }
+void twod(){
+    printf("SHAPE TYPE '2D'");
+    printf("enter a shape whos area needs to be calculated");
+    }
+
+
+
+
