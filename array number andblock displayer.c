@@ -3,7 +3,7 @@
 int main()
 {
     int array_number;
-int a[100];
+int a[100];// main array
 
 printf("enter the number to be stored in array");
 scanf("%d",&array_number);
